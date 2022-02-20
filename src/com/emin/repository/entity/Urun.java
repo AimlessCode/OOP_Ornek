@@ -17,6 +17,7 @@ public class Urun {
   int KDV;
 
 
+
   public Urun(long id) {
     this.id = id;
   }
