@@ -1,32 +1,54 @@
 package com.emin.repository.entity;
 
+import com.emin.constants.Properties;
+import com.emin.utility.StaticValues;
+import static com.emin.constants.Properties.*;
+import static com.emin.utility.StaticValues.getPrs_sirano;
+// import static com.emin.constants.Properties.PREFIX;   <- buda olur
 import java.util.UUID;
 
 public class Personel {
+    /**    ** Önemli **
+     *  static verileri çekerken bunları kısatmak adına
+     * Properties.PREFIX -> yerine static değer içeren sınıf
+     * statick olarak
+     *  import ederiz ve içindeki değerler ulaşırız
+     *
+     */
+
     /**
      * Kimlik
      */
-    private  String id;
-      String ad;
-      String soyad;
-      String adres;
-      String telefon;
-      int yas;
+    private String id;
+    public String sirano;
+    String ad;
+    String soyad;
+    String adres;
+    String telefon;
+    int yas;
     /**
-     *     Durumu
+     * Durumu
      * 0-> Pasif
      * 1-> Aktif
      * 2-> İzinli
      */
     int state;
 
-    public Personel(){
+    public Personel() {
         /**
          * otomatik id vericek
          */
-        this.id= UUID.randomUUID().toString();
+        this.id = UUID.randomUUID().toString();
+        this.sirano = PREFIX + getPrs_sirano();
+      //  this.sirano = Properties.PREFIX + StaticValues.getPrs_sirano();
+    }
 
+    public String getSirano() {
+        return sirano;
+    }
 
+    public void setSirano() {
+        this.sirano = sirano;
     }
 
     public String getId() {

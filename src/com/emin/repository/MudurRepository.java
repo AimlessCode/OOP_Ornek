@@ -27,17 +27,18 @@ public class MudurRepository {
      */
 
     public MudurRepository() {
-       // mudurListesi = new ArrayList<>();
+        // mudurListesi = new ArrayList<>();
 
     }
 
-    public void save(Mudur mudur){
+    public void save(Mudur mudur) {
         StaticValues.mudurList.add(mudur);
 
     }
 
     /**
      * MüdürListesne kullanıcıya döner
+     *
      * @return
      */
     public List<Mudur> findAll() {

@@ -13,4 +13,14 @@ public class StaticValues {
     public static List<Muhendis> muhendisList = new ArrayList<>();
     public static List<Hizmetli> hizmetliList = new ArrayList<>();
 
+
+    private static int prs_sirano = 0;
+
+    public static int getPrs_sirano() {
+        prs_sirano++;
+        return prs_sirano;
+
+    }
+
+
 }
