@@ -42,5 +42,6 @@ public class MudurRepository {
      */
     public List<Mudur> findAll() {
         return StaticValues.mudurList;
+
     }
 }

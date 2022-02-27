@@ -3,6 +3,8 @@ package com.emin;
 import com.emin.repository.MudurRepository;
 import com.emin.repository.entity.Mudur;
 
+import java.util.List;
+
 public class Runner {
 
     public static void main(String[] args) {
@@ -40,7 +42,7 @@ public class Runner {
             System.out.println("Ad : "+item.getAd());
 
         }
-      
+
 
     }
 
