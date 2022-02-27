@@ -1,6 +1,7 @@
 package com.emin.repository;
 
 import com.emin.repository.entity.Mudur;
+import com.emin.utility.StaticValues;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,7 +19,7 @@ import java.util.List;
 public class MudurRepository {
 
     //  çok dogru olmaz->  Mudur[] mudurDizisi =new Mudur[10];
-    private List<Mudur> mudurListesi = new ArrayList<>();
+    //private List<Mudur> mudurListesi = new ArrayList<>();
 
     /**
      * Constructor.
@@ -26,15 +27,20 @@ public class MudurRepository {
      */
 
     public MudurRepository() {
-        mudurListesi = new ArrayList<>();
+       // mudurListesi = new ArrayList<>();
 
     }
+
     public void save(Mudur mudur){
-        this.mudurListesi.add(mudur);
+        StaticValues.mudurList.add(mudur);
 
     }
 
-
-
-
+    /**
+     * MüdürListesne kullanıcıya döner
+     * @return
+     */
+    public List<Mudur> findAll() {
+        return StaticValues.mudurList;
+    }
 }
