@@ -21,11 +21,25 @@ public class MusteriRepository {
      */
     // Liste Tanımla                Initialize - başlatmak.
 
-   private List <Musteri> musterisList= new ArrayList<>();
+    private List<Musteri> musterisList = new ArrayList<>();
+
+    public void RastGeleMusteriListesiOlustur() {
+
+        for (long i = 1; i < 5; i++) {
+
+            Musteri musteri = new Musteri();
+            musteri.setId(i);
+            musteri.setAd("Müşteri " + i);
+            musteri.setSoyad("Soyad " + i);
+            musteri.setAdres("Ankara");
+            musteri.setTckimlik("123123123");
+            musteri.setTelefon("555 555 55 55");
+
+            musterisList.add(musteri);
+        }
 
 
-
-
+    }
     public List<Musteri> getMusterisList() {
         return musterisList;
     }
@@ -33,29 +47,4 @@ public class MusteriRepository {
     public void setMusterisList(List<Musteri> musterisList) {
         this.musterisList = musterisList;
     }
-
-
-
-
-    public void  RastMusteriListesiOlustur(){
-
-       for (long i =1;i<25;i++){
-
-           Musteri musteri =new Musteri();
-           musteri.setId(i);
-           musteri.setAd("musteri"+i);
-           musteri.setSoyad("soyad"+i);
-           musteri.setAdres("Ankara");
-           musteri.setTckimlik("123123123");
-           musteri.setTelefon("5 5 4564 64");
-
-           musterisList.add(musteri);
-       }
-
-
-
-
-
-
-   }
 }

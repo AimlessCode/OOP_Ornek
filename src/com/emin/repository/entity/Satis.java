@@ -25,6 +25,10 @@ public class Satis {
         this.toplamfiyat = toplamfiyat;
     }
 
+    public Satis() {
+
+    }
+
     public long getId() {
         return id;
     }

@@ -24,6 +24,7 @@ public class Musteri {
 
     }
 
+
     public long getId() {
         return id;
     }
