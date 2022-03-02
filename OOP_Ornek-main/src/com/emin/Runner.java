@@ -25,6 +25,7 @@ public class Runner {
         dbMudur.save(mudur);
         dbMudur.save(mudur2);
 
+
         // Yazdırma
         System.out.println(dbMudur.findAll());
         /**
